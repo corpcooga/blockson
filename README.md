@@ -1,6 +1,6 @@
 # Blockson (3D Platformer & Shooter)
 
-A 3D platformer and first/third-person shooter developed in Unity and C#. The player navigates obstacle courses and specialized terrain, engages various enemy archetypes, and must reach the exit portal to progress.
+A 3D platformer and first/third-person shooter developed in Unity and C#. The player navigates obstacle courses and various types of terrain, engages multiple enemy archetypes, and must reach the exit portal to progress.
 
 🔗 **[Play / Download on itch.io](https://corpcooga.itch.io/blockson)**
 
@@ -19,24 +19,23 @@ A 3D platformer and first/third-person shooter developed in Unity and C#. The pl
 
 ---
 
-## Core Gameplay & Systems
+## Technical Architecture & Core Systems
 
-- **Weapon System:** Projectiles eliminate enemies.
-- **Enemy Archetypes:**
-  - *Standard Enemies:* Patrol and deal damage on player contact.
-  - *Heavy Enemies:* Require 2 shots to destroy.
-  - *Ranged Enemies:* Armed with weapons that fire projectiles at the player.
-- **Special Surfaces:**
-  - *Ice Surfaces:* Reduce surface drag to build up high-speed movement momentum.
-  - *Jump Pads:* Launch the player vertically to reach elevated platforms.
-- **Health System:**
-  - 3-heart player health system.
-  - *Spikes:* Deal 1 heart per hit.
-  - *Lava Volumes:* Instant-death upon contact and level restarts.
-- **Camera Controller:**
-  - Dynamic runtime switching between First-Person and Third-Person via keybind.
-  - Projectile path updates to accurately reflect camera angle and crosshair placement.
-- **Objective Progression:** Navigational flow requiring players to eliminate threats and reach portals to advance.
+- **Enemy Finite State Machine (FSM) & Targeting:**
+  - Rule-based state controller managing `Idle`, `Shooting`, and `LostSight` transitions.
+  - Multi-point raycast checks for target detection and occlusion testing.
+  - Position memory caching (`lastKnownLocation`) to drive search routines upon broken sightlines.
+  - Local-to-world coordinate transformations (`InverseTransformPoint`/`TransformPoint`) to constrain pitch and yaw for weapon tracking.
+- **Custom Player Kinematics & Physics:**
+  - Multi-point raycast sampling matrix around character bounds for ground detection.
+  - Moving platform velocity vector inheritance evaluated in `FixedUpdate` to eliminate frame latency and physics desync.
+  - Dynamic surface friction and acceleration scaling simulating momentum and low-drag icy terrain.
+- **Raycast-Driven Aiming & Dual Perspective:**
+  - Dynamic switching between First-Person and Third-Person camera views.
+  - Viewport-to-world raycasting aligning projectile spawn vectors directly with screen-space crosshair placement.
+- **Hazard Volumes & State Progression:**
+  - Heart-based health tracking synced with damage triggers from spikes, enemies, lava.
+  - Level transitions through a portal at the end of each level.
 
 ---
 
