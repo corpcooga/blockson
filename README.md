@@ -8,14 +8,11 @@ A 3D platformer and first/third-person shooter developed in Unity and C#. The pl
 
 ## Gameplay Preview
 
-<p align="center">
-  <img width="49%" alt="Screenshot 2026-09-27 at 5 01 35 PM" src="https://github.com/user-attachments/assets/3460cc3f-9461-49c4-a060-6df4d58084cb" />
-  <img width="49%" alt="Screenshot 2026-09-27 at 5 01 12 PM" src="https://github.com/user-attachments/assets/872c3dbd-15d7-47f0-8b2e-ed614f5852fe" />
-</p>
-<p align="center">
-  <img width="49%" alt="Screenshot 2026-09-27 at 5 00 56 PM" src="https://github.com/user-attachments/assets/73604106-71f3-4bba-8f28-18c3fdf1499d" />
-  <img width="49%" alt="Screenshot 2026-09-27 at 5 00 14 PM" src="https://github.com/user-attachments/assets/23474058-a96b-422c-a926-b081d52b0c59" />
-</p>
+
+<img width="49%" alt="1" src="https://github.com/user-attachments/assets/f7433f53-111b-4715-855a-fc017b2417bb" />
+<img width="49%" alt="2" src="https://github.com/user-attachments/assets/42faf8f2-af41-4c36-863a-197d65c33340" />
+<img width="49%" alt="3" src="https://github.com/user-attachments/assets/d81f9109-c539-46df-b39c-5f1b7553ec93" />
+<img width="49%" alt="4" src="https://github.com/user-attachments/assets/e8f3ccec-8647-474f-8005-c6156c11d642" />
 
 ---
 
