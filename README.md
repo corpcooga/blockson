@@ -8,7 +8,6 @@ A 3D platformer and first/third-person shooter developed in Unity and C#. The pl
 
 ## Gameplay Preview
 
-
 <img width="49%" alt="1" src="https://github.com/user-attachments/assets/f7433f53-111b-4715-855a-fc017b2417bb" />
 <img width="49%" alt="2" src="https://github.com/user-attachments/assets/42faf8f2-af41-4c36-863a-197d65c33340" />
 <img width="49%" alt="3" src="https://github.com/user-attachments/assets/d81f9109-c539-46df-b39c-5f1b7553ec93" />
